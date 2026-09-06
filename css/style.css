@@ -1351,6 +1351,8 @@
     padding: 40px 20px;
     text-align: center;
     font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #000000; /* ← ДОБАВИТЬ ЭТО */
+    color: #ffffff; /* ← И ЭТО для надёжности */
 }
 
 /* Аватар */
