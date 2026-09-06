@@ -1119,8 +1119,16 @@
 
 @media (max-width: 768px) {
     /* === 1. СТРУКТУРА СТРАНИЦЫ === */
+    .split-page {
+        height: auto !important;
+        min-height: 100vh;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+    }
+
     .split-container {
-        flex-direction: column;
+        height: auto !important;
+        min-height: 100vh;
     }
 
     .right-panel {
