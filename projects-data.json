@@ -1,0 +1,137 @@
+{
+  "categories": {
+    "graphic": "/GraphicDesign",
+    "creative": "/Projects",
+    "curatorial": "/Curation",
+    "photo": "/Cameraman",
+    "3D": "/3D"
+  },
+  "projects": [
+    {
+      "id": "³дм",
+      "title": "«³дм» МАСТЕРСКАЯ 3D-ГРАФИКИ ИЖЕВСКОЙ АРТ-РЕЗИДЕНЦИИ",
+      "link": "cases/project-3dm.html",
+      "description": "Разработка дизайна и программы курсов обучения 3D-графике и визуализации, где студенты создают свои проекты и получают обратную связь. Включает программу обучения и свободное посещения с печатью прототипов. 2025–2026.",
+      "role": "Граф. дизайнер, куратор, преподаватель",
+      "bgColor": "#000000",
+      "categories": ["graphic"],
+      "soft": ["Touchdesigner", "Figma", "Adobe Photoshop", "Nano Banana Pro 2"],
+      "workflow": [
+        { "step": 1, "title": "Концепт", "description": "Разработка идеи" },
+        { "step": 2, "title": "Вёрстка макета", "description": "Создание композиции" },
+        { "step": 3, "title": "3D моделирование", "description": "Blender + Substance" },
+        { "step": 4, "title": "Рендеринг", "description": "Финальная обработка" }
+      ],
+      "playerHeight": 600,
+      "mediaMode": "contain",
+      "media": [
+        { "type": "img", "src": "cases/20263DM/preview.jpg", "alt": "Graphic Design" },
+        { "type": "video", "src": "cases/20263DM/0001-0871.mp4", "alt": "Middle Note" }
+      ]
+    },
+    {
+      "id": "middle-notes",
+      "title": "«MIDDLE NOTES»: МОРФОЛОГИЯ ЗАПАХА",
+      "link": "cases/project-middle-notes.html",
+      "description": "Встречи Морфология запаха: Клуб «Middle Notes» Марины Рябцевой в рамках её дипломного проекта, 15–16 мая 2026: лекции «История структурирования запаха» и «Попытки уловить запах», реконструкция игры Kodo, воркшопы «Визуальный анализ ароматов»",
+      "role": "Куратор, фотограф",
+      "bgColor": "#5a52a8",
+      "categories": ["curatorial", "photo"],
+      "playerHeight": 500,
+      "mediaMode": "cover",
+      "media": [
+        { "type": "img", "src": "cases/2026MiddleNotes/middleNotes (6).jpg", "alt": "Middle Notes 1" },
+        { "type": "img", "src": "cases/2026MiddleNotes/middleNotes (2).jpg", "alt": "Middle Notes 1" },
+        { "type": "img", "src": "cases/2026MiddleNotes/middleNotes (8).jpg", "alt": "Middle Notes 1" },
+        { "type": "img", "src": "cases/2026MiddleNotes/middleNotes (7).jpg", "alt": "Middle Notes 1" },
+        { "type": "img", "src": "cases/2026MiddleNotes/middleNotes (5).jpg", "alt": "Middle Notes 1" },
+        { "type": "img", "src": "cases/2026MiddleNotes/middleNotes (4).jpg", "alt": "Middle Notes 1" }
+      ]
+    },
+    {
+      "id": "svoxternii",
+      "title": "«СКВОЗЬ ТЕРНИИ» LAST UNICORN (2023)",
+      "link": "cases/project-svoxternii.html",
+      "description": "Новым героем нашей рубрики ethereal chat...",
+      "role": "Куратор, фотограф",
+      "bgColor": "#c47a3a",
+      "categories": ["curatorial", "photo"],
+      "playerHeight": 500,
+      "mediaMode": "cover",
+      "media": [
+        { "type": "img", "src": "cases/2023svoxternii/svoxternii (2).jpg", "alt": "Сквозь Тернии 1" },
+        { "type": "img", "src": "cases/2023svoxternii/svoxternii (1).jpg", "alt": "Сквозь Тернии 1" },
+        { "type": "img", "src": "cases/2023svoxternii/svoxternii (4).jpg", "alt": "Сквозь Тернии 1" },
+        { "type": "img", "src": "cases/2023svoxternii/svoxternii (8).jpg", "alt": "Сквозь Тернии 1" },
+        { "type": "img", "src": "cases/2023svoxternii/svoxternii (10).jpg", "alt": "Сквозь Тернии 1" },
+        { "type": "img", "src": "cases/2023svoxternii/svoxternii (11).jpg", "alt": "Сквозь Тернии 1" }
+      ]
+    },
+    {
+      "id": "laska",
+      "title": "«Ласка» на Каме для MOR (2024)",
+      "link": "cases/project-laskaKama.html",
+      "description": "Фотосет Саши Артемьевой aka Ласка в преддверии премьеры лайва с синглом «Тону» на платформе «MOR».",
+      "role": "Фотограф",
+      "bgColor": "#2a4a6b",
+      "categories": ["creative", "photo"],
+      "playerHeight": 450,
+      "mediaMode": "cover",
+      "media": [
+        { "type": "img", "src": "cases/2024laskaonkama/laska2024_(1).jpg", "alt": "Ласка на Каме" }
+      ]
+    },
+    {
+      "id": "livefrommor",
+      "title": "Live From MOR",
+      "link": "cases/project-LiveFromMor.html",
+      "description": "Серия выступлений исполнителей Поволжья",
+      "role": "Визионер, видеограф, монтажёр и декоратор",
+      "bgColor": "#1a3a2a",
+      "categories": ["creative", "photo"],
+      "playerHeight": 450,
+      "mediaMode": "cover",
+      "media": [
+        { "type": "video", "src": "cases/2024livefrommor/media/TeploteploMORPerformance20240516.mp4", "alt": "Live" }
+      ]
+    },
+    {
+      "id": "LocalGigs20242025",
+      "title": "Концертная фото-съёмка",
+      "link": "cases/project-LocalGig.html",
+      "description": "Фотосъёмка локальных концертов в Ижевске и Удмуртии, 2024–2025.",
+      "role": "Фотограф",
+      "bgColor": "#000000",
+      "categories": ["photo"],
+      "playerHeight": 500,
+      "mediaMode": "cover",
+      "media": [
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (9).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (16).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (15).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (1).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (12).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (19).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (3).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (14).jpg", "alt": "img" }
+      ]
+    },
+    {
+      "id": "izhartres",
+      "title": "Ижевская Арт-резиденция",
+      "link": "cases/project-IzhArtres.html",
+      "description": "Разработка макетов для мероприятий",
+      "role": "Дизайнер",
+      "bgColor": "#000000",
+      "categories": ["graphic"],
+      "playerHeight": 600,
+      "mediaMode": "contain",
+      "media": [
+        { "type": "img", "src": "cases/2026IzhResidence/ar (5).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/2026IzhResidence/plen (1).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/2026IzhResidence/ar (3).jpg", "alt": "img" },
+        { "type": "img", "src": "cases/2026IzhResidence/plen (3).jpg", "alt": "img" }
+      ]
+    }
+  ]
+}

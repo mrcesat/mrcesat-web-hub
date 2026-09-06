@@ -1,0 +1,1445 @@
+/* =========================================
+   SPLIT PAGE LAYOUT (INDEX-V4)
+   ========================================= */
+
+.split-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.split-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================
+   ЛЕВАЯ ПАНЕЛЬ
+   ========================================= */
+
+.left-panel {
+    width: 25%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #000000;
+    flex-shrink: 0;
+    border-right: 2px solid #ffffff !important;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.left-panel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Профиль */
+.profile-section {
+    padding: 16px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.profile-header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    letter-spacing: 0;
+}
+
+.profile-year,
+.profile-location {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* Контакты */
+.profile-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 16px;
+}
+
+.contact-link {
+    display: block;
+    padding: 10px 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+.contact-link:last-child {
+    border-bottom: none;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+/* Общий блок без внутренних разделителей */
+.info-combined {
+    padding: 16px;
+    border-bottom: 2px solid #ffffff; /* Линия только снизу всего блока */
+}
+
+.info-subsection {
+    margin-bottom: 32px; /* Отступ между под-секциями */
+}
+
+.info-subsection:last-child {
+    margin-bottom: 0;
+}
+
+/* Убираем линии между пунктами списков */
+.project-list li {
+    border-bottom: none;
+}
+
+/* Список ролей (описание) */
+.role-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-list li {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #c8c8c8;
+    padding: 8px 0;
+    border-bottom: none;
+}
+
+.role-list li:last-child {
+    border-bottom: none;
+}
+
+/* Секции информации */
+.info-section {
+    padding: 16px 16px 16px 16px;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Увеличиваем отступ только для второго info-section (Избранное) */
+.profile-section + .info-section + .info-section {
+    padding: 16px 16px 32px 16px;
+}
+
+/* ✅ Убираем линию у первого info-section (блок ролей),
+   чтобы не было разделителя между ролями и «Избранным» */
+.profile-section + .info-section {
+    border-bottom: none;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px 0;
+    color: #ffffff;
+}
+
+.section-text {
+    font-size: 14px;
+    line-height: 1.4; /* ✅ Исправлено с 1.1 для читаемости */
+    color: #c8c8c8;
+    margin: 0;
+}
+
+/* Списки проектов */
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-list li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* ✅ Исправлено с rgba(0,0,0,0.2), иначе не видно на чёрном */
+}
+
+.project-list li:last-child {
+    border-bottom: none;
+}
+
+.project-list-link {
+    display: block;
+    padding: 8px 0;
+    color: #c8c8c8;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.0; /* ✅ Исправлено с 0.2, иначе текст накладывался друг на друга */
+    transition: opacity 0.3s ease;
+}
+
+.project-list-link:hover {
+    opacity: 0.7;
+}
+
+/* Описание между профилем и списком */
+.profile-description {
+    padding: 16px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.profile-description .description-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #c8c8c8;
+    margin: 0;
+}
+
+/* Copyright */
+.copyright {
+    padding: 16px;
+}
+
+.copyright p {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+}
+
+/* Ссылка внутри описания */
+.description-link {
+    color: #c8c8c8;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.description-link:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* =========================================
+   ПРАВАЯ ПАНЕЛЬ
+   ========================================= */
+
+.right-panel {
+    flex: 1; /* ✅ Автоматически занимает всё оставшееся место (75%) */
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #000000;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.right-panel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Проекты */
+.project-item {
+    border-bottom: 2px solid #ffffff !important;
+}
+
+/* УДАЛИТЕ старый .project-title и добавьте: */
+
+/* Контейнер бегущей строки */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 2px solid #ffffff;
+    background: #000000;
+    position: relative;
+}
+
+/* Движущаяся строка */
+.marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.marquee-content span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 12px 16px;
+    margin: 0;
+    letter-spacing: 0;
+    flex-shrink: 0;
+}
+
+/* Анимация движения
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%); /* Двигаем на 1/3 ширины (один span)
+    }
+}
+*/
+
+/* Пауза при наведении */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.project-content-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: filter 0.0s ease;
+}
+
+.project-content-link:hover {
+    background: #ffffff; /* Фон становится белым */
+}
+
+.project-content-link:hover .project-description p {
+    color: #000000; /* Текст становится чёрным */
+}
+
+/* Контент проекта: изображение слева, текст справа */
+.project-content {
+    display: grid;
+    grid-template-columns: 68% 32%;
+    gap: 0;
+}
+
+.project-description {
+    padding: 32px 16px 32px 32px; /* ✅ Выровнял левый отступ текста под отступ заголовка */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.project-description p {
+    font-size: 14px;
+    line-height: 1.4; /* ✅ Исправлено с 1.2 для лучшего чтения */
+    color: #efefef;
+    margin: 0;
+}
+
+/* Отступ между описанием и ролями */
+.project-description .role-text {
+    margin-top: 16px;
+}
+
+/* Блок программ */
+.project-description .soft-list {
+    margin-top: 12px;
+}
+
+.project-description .soft-title {
+    font-size: 14px;
+    color: #888;
+    margin: 0 0 8px 0;
+    font-style: normal;
+}
+
+.project-description .soft-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-description .soft-list li {
+    font-size: 14px;
+    color: #c8c8c8;
+    padding: 2px 0;
+    line-height: 1.4;
+}
+
+/* =========================================
+   ПЕРЕКЛЮЧАТЕЛЬ КАТЕГОРИЙ (ПРАВАЯ ПАНЕЛЬ)
+   ========================================= */
+
+.category-switcher {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #ffffff !important;
+    background: #000000;
+    /* ✅ Убрано position: sticky — теперь прокручивается вместе с контентом */
+}
+
+.switcher-link {
+    flex: 1;
+    padding: 8px 8px; /* ✅ Было 20px 16px, уменьшено в 2 раза */
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888888;
+    text-decoration: none;
+    text-align: center;
+    border-right: 2px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Кнопка "Все проекты" — фиксированная ширина */
+.switcher-link.switcher-all {
+    flex: 0 0 auto;
+    width: 10px;
+    min-width: 10px;
+    max-width: 20px;
+    text-align: center;
+}
+
+/* Остальные кнопки — занимают оставшееся пространство */
+.switcher-link:not(.switcher-all) {
+    flex: 1;
+}
+
+.switcher-link:last-child {
+    border-right: none;
+}
+
+.switcher-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.switcher-link.active {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 700;
+}
+
+.switcher-link.active:hover {
+    background: #ffffff;
+}
+
+/* =========================================
+   3D GALLERY PAGE
+   ========================================= */
+
+.gallery-3d-page .right-panel {
+    overflow: hidden; /* Убираем скролл для 3D-сцены */
+}
+
+.gallery-3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Кнопка скрытия панели */
+.toggle-panel-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 101;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.toggle-panel-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Скрытая панель */
+.left-panel.hidden {
+    transform: translateX(-100%);
+}
+
+/* Когда панель скрыта, правая панель на весь экран */
+.gallery-3d-page.split-page .split-container {
+    position: relative;
+}
+
+.gallery-3d-page .left-panel.hidden ~ .right-panel {
+    width: 100%;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 1024px) {
+    .gallery-3d-page .split-container {
+        flex-direction: column;
+    }
+
+    .gallery-3d-page .left-panel,
+    .gallery-3d-page .right-panel {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .gallery-3d-page .left-panel {
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+    }
+}
+
+/* =========================================
+   СТРАНИЦА ПРОСМОТРА ПРОЕКТА
+   ========================================= */
+
+/*
+.project-view-page {
+    --project-bg: #000000;
+} */
+
+/* .project-view-page .right-panel {
+    background: #000000; /* Всегда чёрный
+} */
+
+/*
+.project-media-player {
+    background: var(#000000); /* Цвет только в плеере
+} */
+
+/* Заголовок проекта (бегущая строка) */
+.project-header {
+    width: 100%;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+.project-title-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 12px 16px;
+    white-space: nowrap;
+}
+
+/* Описание проекта (обёртка правой колонки) */
+.project-description-block {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    overflow: hidden;
+    position: relative;
+    border-left: 2px solid #ffffff;  /* ← ДОБАВИТЬ ЭТО */
+}
+
+.project-description-view {
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    height: 100%; /* Растягиваем на всю высоту родителя (.project-description-block) */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    scrollbar-width: thin; /* Тонкий скроллбар для Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.project-description-content-wrapper {
+    padding: 32px 24px;
+    font-size: 14px; /* ✅ Добавили единый размер шрифта */
+}
+
+/* ✅ Убираем маркеры у списка софта */
+.project-description-content-wrapper .soft-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-description-content-wrapper .soft-list li {
+    font-size: 14px; /* ✅统一 размер */
+    color: #c8c8c8;
+    padding: 2px 0;
+    line-height: 1.4;
+}
+
+/* Кастомный скроллбар для Chrome, Safari, Edge */
+.project-description-view::-webkit-scrollbar {
+    width: 6px;
+}
+.project-description-view::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+.project-description-view::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+.project-description-view::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.description-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #efefef;
+    margin: 0 0 16px 0;
+}
+
+.role-text {
+    color: #d0d0d0 !important;
+    font-style: normal;
+}
+
+/* Область просмотра: медиа + описание */
+.project-viewer {
+    display: grid;
+    grid-template-columns: 68% 32%;
+    gap: 0;
+    height: calc(100vh - 110px); /* Фиксированная высота всей области */
+    border-top: none;
+    /* Убрали align-items: start, чтобы обе колонки гарантированно
+       занимали 100% высоты этого контейнера */
+}
+
+/* =========================================
+   МЕДИА-ПЛЕЕР (общая структура)
+   ========================================= */
+
+.project-media-player {
+    position: relative;
+    width: 100%;
+    /* background: var(--project-bg, #000000); */
+    overflow: hidden;
+    border-right: 2px solid #ffffff;
+    border-top: none;
+}
+
+.media-stage {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Слайды */
+.media-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.media-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.media-slide.slide-out-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.media-slide.slide-out-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.media-slide.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.media-slide.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Зоны клика */
+.player-zone {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 20;
+    cursor: pointer;
+    background: transparent;
+}
+
+.player-zone-left { left: 0; }
+.player-zone-right { right: 0; }
+
+/* =========================================
+   РЕЖИМ CONTAIN (по умолчанию, с отступами)
+   ========================================= */
+
+.project-media-player.media-fit-contain .media-stage,
+.project-media-player:not(.media-fit-cover) .media-stage {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+.project-media-player.media-fit-contain .media-slide,
+.project-media-player:not(.media-fit-cover) .media-slide {
+    align-items: center;
+    justify-content: center;
+}
+
+.project-media-player.media-fit-contain .media-slide img,
+.project-media-player.media-fit-contain .media-slide video,
+.project-media-player:not(.media-fit-cover) .media-slide img,
+.project-media-player:not(.media-fit-cover) .media-slide video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================================
+   РЕЖИМ COVER (без отступов, на весь плеер)
+   ========================================= */
+
+.project-media-player.media-fit-cover {
+    background: #000000; /* Чёрный фон вместо цветного */
+}
+
+.project-media-player.media-fit-cover .media-stage {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+.project-media-player.media-fit-cover .media-slide {
+    align-items: stretch !important;
+    justify-content: stretch !important;
+}
+
+.project-media-player.media-fit-cover .media-slide img,
+.project-media-player.media-fit-cover .media-slide video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+/* Мобильная адаптация для режима cover */
+@media (max-width: 768px) {
+    .project-media-player.media-fit-cover {
+        height: auto !important;
+        aspect-ratio: 16 / 9;  /* Стандартное соотношение для видео/фото */
+    }
+
+    .project-media-player.media-fit-contain {
+        height: 250px !important;
+    }
+}
+
+/* =========================================
+   РЕЖИМ GRID (ПЛИТКА) — ПОЛНАЯ ИЗОЛЯЦИЯ
+   ========================================= */
+
+.project-media-player.media-fit-grid {
+    background: #000000;
+    position: relative;
+}
+
+/* Полностью переопределяем media-stage для grid */
+.project-media-player.media-fit-grid .media-stage {
+    position: absolute !important;
+    top: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    display: block !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 !important;
+}
+
+.project-media-player.media-fit-grid .media-stage::-webkit-scrollbar {
+    display: none;
+}
+
+/* Полностью переопределяем media-slider для grid */
+.project-media-player.media-fit-grid .media-slider {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 16px;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+/* КРИТИЧНО: полностью переопределяем media-slide */
+.project-media-player.media-fit-grid .media-slide {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1 !important;
+}
+
+.project-media-player.media-fit-grid .media-slide:hover {
+    opacity: 0.8;
+}
+
+.project-media-player.media-fit-grid .media-slide img,
+.project-media-player.media-fit-grid .media-slide video {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 !important;
+}
+
+/* Single-view режим */
+.project-media-player.media-fit-grid.single-view .media-stage {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden !important;
+}
+
+.project-media-player.media-fit-grid.single-view .media-slider {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+    gap: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.project-media-player.media-fit-grid.single-view .media-slide {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-media-player.media-fit-grid.single-view .media-slide.active {
+    opacity: 1 !important;
+    pointer-events: auto;
+    z-index: 10 !important;
+}
+
+.project-media-player.media-fit-grid.single-view .media-slide img,
+.project-media-player.media-fit-grid.single-view .media-slide video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+/* Навигация */
+.project-media-player.media-fit-grid.single-view .player-zone {
+    display: block !important;
+}
+
+.project-media-player.media-fit-grid .player-zone {
+    display: none !important;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .project-media-player.media-fit-grid .media-slider {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+    }
+
+    .project-media-player.media-fit-grid .media-stage {
+        top: 8px !important;
+        left: 8px !important;
+        right: 8px !important;
+        bottom: 8px !important;
+    }
+
+    .project-media-player.media-fit-grid .media-slide img,
+    .project-media-player.media-fit-grid .media-slide video {
+        height: 200px !important;
+    }
+}
+
+/* =========================================
+   СПЕЦИФИКА ДЛЯ СТРАНИЦЫ ПРОЕКТА (ИСПРАВЛЕНО)
+   ========================================= */
+
+.project-view-page .project-media-player {
+    height: 100%;
+    position: relative; /* Важно для абсолютного позиционирования stage */
+}
+
+.project-view-page .media-stage {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    /* Убираем flex отсюда, чтобы он не конфликтовал с центрированием внутри слайда */
+}
+
+.project-view-page .media-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Слайд занимает всё пространство stage */
+.project-view-page .media-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* МАГИЧЕСКОЕ ЦЕНТРИРОВАНИЕ: margin: auto делает отступы математически идеальными */
+.project-view-page .media-slide img,
+.project-view-page .media-slide video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto; /* ← ЭТО ГЛАВНОЕ ИСПРАВЛЕНИЕ */
+    object-fit: contain;
+}
+
+/* =========================================
+   СПЕЦИФИКА ДЛЯ СПИСКА ПРОЕКТОВ
+   ========================================= */
+
+.projects-list .project-item .project-media-player {
+    height: 400px;
+}
+
+.projects-list .project-item .media-stage {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+/* =========================================
+   АДАПТАЦИЯ
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .project-viewer {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .project-media-player {
+        height: 60vh;
+        border-right: none;
+        border-bottom: 2px solid #ffffff !important;
+    }
+
+    .projects-list .project-item .project-media-player {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-list .project-item .project-media-player {
+        height: 250px;
+    }
+}
+
+/* =========================================
+   WORKFLOW / БЛОК-СХЕМА
+   ========================================= */
+
+.workflow-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.workflow-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 24px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.workflow-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.workflow-block {
+    position: relative;
+}
+
+.workflow-block-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff;  /* ✅ Белая обводка */
+    border-radius: 0px;
+    padding: 16px;
+    transition: all 0.3s ease;
+}
+
+.workflow-block:hover .workflow-block-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    transform: translateX(4px);
+}
+
+.workflow-step {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: #ffffff;  /* ✅ Белый фон кружка */
+    border: 1px solid #ffffff;  /* ✅ Белая обводка кружка */
+    border-radius: 0%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;  /* ✅ Чёрный текст для контраста */
+    margin-bottom: 8px;
+}
+
+.workflow-block-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+}
+
+.workflow-block-desc {
+    font-size: 13px;
+    color: #a0a0a0;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.workflow-connector {
+    width: 2px;
+    height: 24px;
+    background: #ffffff;
+    margin: 0 auto;  /* ✅ Автоматически центрирует по горизонтали */
+    /* Убрали position: relative и left */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .workflow-block-content {
+        padding: 12px;
+    }
+}
+
+/* =========================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ — ЕДИНЫЙ БЛОК
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Переключатель категорий — sticky сверху */
+    .category-switcher {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: #000000;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .switcher-link {
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .switcher-link.switcher-all {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .switcher-link:last-child {
+        border-bottom: 2px solid #ffffff;
+    }
+
+    /* 2. Профиль */
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+    }
+
+    .profile-contacts {
+        align-items: center;
+    }
+
+    .profile-section,
+    .info-section,
+    .project-title,
+    .project-description {
+        padding: 16px;
+    }
+
+    .project-title {
+        font-size: 28px;
+    }
+
+    /* 3. Карточки проектов */
+    .project-item .project-media-player {
+        height: 250px !important;
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .project-item .media-stage {
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+
+    .project-description-content-wrapper {
+        padding: 16px;
+    }
+
+    /* 4. Плеер на странице проекта */
+    .project-view-page .project-description-block {
+        border-left: none;
+        border-top: 2px solid #ffffff;
+    }
+
+    /* 5. Workflow */
+    .workflow-block-content {
+        padding: 12px;
+    }
+
+    /* 6. Cover режим */
+    .project-media-player.media-fit-cover {
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-media-player.media-fit-contain {
+        height: 250px !important;
+    }
+}
+
+/* =========================================
+   ФИНАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (Только телефоны <= 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Меняем структуру на вертикальную */
+    .split-container {
+        flex-direction: column;
+    }
+
+    .right-panel {
+        order: 1;
+        height: auto;
+        min-height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .left-panel {
+        order: 2;
+        height: auto;
+        width: 100%;
+        border-right: none;
+        border-top: 2px solid #ffffff;
+        overflow-y: auto;
+    }
+
+    /* 2. Бургер-меню (видимо ТОЛЬКО здесь, на десктопе его нет в DOM или оно скрыто) */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        margin: 8px 0 8px 16px;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .burger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .burger-menu.active span:nth-child(2) { opacity: 0; }
+    .burger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+    /* 3. Выпадающее меню категорий */
+    .category-switcher {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: #000000;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .category-menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .category-menu.active {
+        max-height: 400px;
+    }
+
+    .category-menu .switcher-link {
+        display: block;
+        padding: 16px 24px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: left;
+        font-size: 14px;
+        color: #ffffff;
+    }
+
+    .category-menu .switcher-link.active {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    /* 4. Адаптация контента */
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-contacts {
+        align-items: center;
+    }
+
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item .project-media-player {
+        height: 250px !important;
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .project-view-page .project-description-block {
+        border-left: none;
+        border-top: 2px solid #ffffff;
+    }
+}
+
+/* =========================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ-LINKTREE
+   ========================================= */
+
+.linktree-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Аватар */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 0%;
+    object-fit: cover;
+    border: 0px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Текст профиля */
+.linktree-page h1 {
+    color: #fff;
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.linktree-page p {
+    color: #aaa;
+    margin: 0 0 40px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+/* Контейнер кнопок */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px; /* Ограничиваем ширину для красоты на ПК */
+}
+
+/* Сами кнопки-ссылки */
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Эффект матового стекла */
+}
+
+/* Эффект при наведении на кнопку */
+.link-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Подвал */
+.footer,
+.footer p {
+    margin-top: 40px;
+    color: #555;
+    font-size: 12px !important; /* 12px читается хорошо, 6px — нет */
+    font-weight: 400 !important; /* Сбрасываем жирность, если она наследуется от body */
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Базовый стиль для обеих кнопок */
+.nav-btn {
+    position: fixed; /* Фиксируем кнопку, чтобы она оставалась на месте при скролле */
+    top: 40px; /* Отступ сверху, совпадает с margin вашего основного блока */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Чтобы кнопка была поверх всего, включая частицы */
+}

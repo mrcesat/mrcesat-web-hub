@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrcesat middle notes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body class="split-page project-view-page"
+      data-project-title="Клуб «Middle Notes»: Морфология Запаха"
+      data-project-description="Встречи Морфология запаха: Клуб «Middle Notes» Марины Рябцевой в рамках её дипломного проекта, 15–16 мая 2026: лекции «История структурирования запаха» и «Попытки уловить запах», реконструкция игры Kodo, воркшопы «Визуальный анализ ароматов»."
+      data-project-role="Куратор, фотограф"
+      data-project-color="#5a52a8"
+      data-project-workflow='[{"step":1,"title":"Менеджмент сроков и анонсирования","description":"Обсуждение концепции"},{"step":2,"title":"Монтаж выставки и декораций","description":"Подбор материалов, подготовка рам, печать и развеска"},{"step":3,"title":"Организация встреч","description":"Timepad, тайминги, ассистирование"},{"step":4,"title":"Обработка фотодокументации","description":"Lightroom + Photoshop"}]'>
+
+    <div class="split-container">
+
+        <!-- Левая панель (загрузится из компонента) -->
+        <aside class="left-panel"></aside>
+
+        <!-- Правая панель -->
+        <main class="right-panel">
+
+            <!-- Навигация (загрузится из компонента) -->
+            <nav class="category-switcher"></nav>
+
+            <!-- Заголовок (загрузится из компонента с параметром) -->
+            <div class="project-header"></div>
+
+            <!-- Область просмотра -->
+            <div class="project-viewer">
+
+                <!-- МЕДИА-ПЛЕЕР (68%) -->
+                <div class="project-media-player" style="background: #000000;">
+                    <div class="media-stage">
+                        <div class="media-slider">
+                            <!-- Слайды проекта (индивидуально для каждого проекта) -->
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (2).jpg" alt="Middle Notes 1">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (6).jpg" alt="Middle Notes 2">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (7).jpg" alt="Middle Notes 3">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (5).jpg" alt="Middle Notes 4">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (9).jpg" alt="Middle Notes 5">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (10).jpg" alt="Middle Notes 6">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (8).jpg" alt="Middle Notes 6">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (1).jpg" alt="Middle Notes 6">
+                            </div>
+                            <div class="media-slide">
+                                <img src="../cases/2026MiddleNotes/middleNotes (3).jpg" alt="Middle Notes 6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Зоны клика -->
+                    <div class="player-zone player-zone-left" id="zone-prev"></div>
+                    <div class="player-zone player-zone-right" id="zone-next"></div>
+                </div>
+
+                <!-- Описание (загрузится из компонента с параметрами) -->
+                <div class="project-description-block"></div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/project-player.js"></script>
+</body>
+</html>

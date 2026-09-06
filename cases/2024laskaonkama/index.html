@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrcesat | Project Name</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="project-page-v2">
+
+    <!-- НАВИГАЦИОННАЯ ПАНЕЛЬ -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/cv/" class="nav-link">CV</a>
+                <a href="/#projects" class="nav-link">Projects</a>
+                <a href="/#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ОСНОВНОЙ LAYOUT: 1/3 текст + 2/3 плеер -->
+    <div class="project-layout">
+        
+        <!-- ЛЕВАЯ КОЛОНКА: Текстовые блоки -->
+        <aside class="project-text-column">
+            <div class="text-column-content">
+                
+                <!-- Заголовок проекта -->
+                <div class="project-header-info">
+                    <h1 class="project-title">Project Name</h1>
+                    <p class="project-subtitle">A visual exploration of light and form</p>
+                </div>
+
+                <!-- Текстовые под-блоки -->
+                <div class="project-text-block">
+                    <h3 class="text-block-title">Concept</h3>
+                    <p class="text-block-text">Описание концепции проекта. Расскажите о идее, вдохновении и процессе создания. Этот текст может быть длинным и занимать несколько строк.</p>
+                </div>
+
+                <div class="project-text-block">
+                    <h3 class="text-block-title">Tools</h3>
+                    <p class="text-block-text">Blender, Photoshop, After Effects, DaVinci Resolve</p>
+                </div>
+
+                <div class="project-text-block">
+                    <h3 class="text-block-title">Year</h3>
+                    <p class="text-block-text">2025</p>
+                </div>
+
+                <div class="project-text-block">
+                    <h3 class="text-block-title">Role</h3>
+                    <p class="text-block-text">Art Direction, Motion Design, 3D Modeling</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- ПРАВАЯ КОЛОНКА: Плеер -->
+        <main class="project-player-column">
+            <div class="player-container" id="player">
+                
+                <!-- Слайды -->
+                <div class="player-slides" id="player-slides"></div>
+
+                <!-- Зоны клика -->
+                <div class="player-zone player-zone-left" id="zone-left">
+                    <div class="zone-arrow">←</div>
+                </div>
+                <div class="player-zone player-zone-right" id="zone-right">
+                    <div class="zone-arrow">→</div>
+                </div>
+
+                <!-- Счётчик -->
+                <div class="player-counter">
+                    <span id="current-slide">1</span> / <span id="total-slides">0</span>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/player.js"></script>
+</body>
+</html>
