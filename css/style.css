@@ -1118,37 +1118,44 @@
    ========================================= */
 
 @media (max-width: 768px) {
-    /* === 1. СТРУКТУРА СТРАНИЦЫ === */
+    /* === КРИТИЧНО: разрешаем прокрутку всей страницы === */
     .split-page {
         height: auto !important;
         min-height: 100vh;
         overflow-y: auto !important;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+        display: block !important; /* Меняем flex на block */
     }
 
     .split-container {
         height: auto !important;
         min-height: 100vh;
+        display: block !important; /* Меняем flex на block */
     }
 
+    /* === Правая панель (контент) === */
     .right-panel {
-        order: 1;
-        height: auto;
+        order: 1 !important;
+        height: auto !important;
         min-height: 100vh;
-        width: 100%;
+        width: 100% !important;
         overflow-y: auto;
+        overflow-x: hidden;
+        display: block !important;
     }
 
+    /* === Левая панель (профиль) === */
     .left-panel {
-        order: 2;
-        height: auto;
-        width: 100%;
-        border-right: none;
+        order: 2 !important;
+        height: auto !important;
+        width: 100% !important; /* КРИТИЧНО: было 25% */
+        border-right: none !important;
         border-top: 2px solid #ffffff;
         overflow-y: auto;
+        display: block !important;
     }
 
-    /* === 2. КОМПАКТНОЕ ГОРИЗОНТАЛЬНОЕ МЕНЮ === */
+    /* === КОМПАКТНОЕ ГОРИЗОНТАЛЬНОЕ МЕНЮ === */
     .category-switcher {
         position: sticky;
         top: 0;
@@ -1187,7 +1194,7 @@
         border-right: none;
     }
 
-    /* === 3. ПРОФИЛЬ === */
+    /* === Профиль === */
     .profile-header {
         flex-direction: column;
         align-items: center;
@@ -1219,7 +1226,7 @@
         font-size: 28px;
     }
 
-    /* === 4. КАРТОЧКИ ПРОЕКТОВ (главная страница) === */
+    /* === Карточки проектов === */
     .project-item .project-media-player {
         height: 250px !important;
         border-right: none;
@@ -1237,7 +1244,7 @@
         grid-template-columns: 1fr;
     }
 
-    /* === 5. ПЛЕЕР НА СТРАНИЦЕ ПРОЕКТА === */
+    /* === Плеер на странице проекта === */
     .project-viewer {
         grid-template-columns: 1fr !important;
         height: auto !important;
@@ -1265,7 +1272,7 @@
         padding: 16px;
     }
 
-    /* === 6. COVER РЕЖИМ === */
+    /* === Cover режим === */
     .project-media-player.media-fit-cover {
         height: auto !important;
         aspect-ratio: 16 / 9;
@@ -1275,7 +1282,7 @@
         height: 250px !important;
     }
 
-    /* === 7. GRID РЕЖИМ === */
+    /* === Grid режим === */
     .project-media-player.media-fit-grid .media-slider {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 8px;
@@ -1293,7 +1300,7 @@
         height: 200px !important;
     }
 
-    /* === 8. WORKFLOW === */
+    /* === Workflow === */
     .workflow-block-content {
         padding: 12px;
     }
