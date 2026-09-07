@@ -1183,10 +1183,10 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         white-space: nowrap;
+        border-top: 2px solid #ffffff;    /* ← линия сверху (вместо скрытого linktree) */
         border-bottom: 2px solid #ffffff;
-        width: calc(100% + 32px) !important; /* Компенсируем padding родителя */
-        margin-left: -16px !important; /* Выходим за padding */
-        margin-right: -16px !important;
+        width: auto !important;           /* ← ключевое: блок сам займёт ширину контента */
+        margin: 0 !important;             /* ← без отрицательных margin и calc */
         padding: 0 !important;
     }
 
@@ -1351,6 +1351,86 @@
     /* === Workflow === */
     .workflow-block-content {
         padding: 12px;
+    }
+
+    /* === РАЗМЕРЫ ШРИФТОВ НА МОБИЛЬНЫХ === */
+
+    /* Заголовок проекта (бегущая строка) */
+    .project-title-text {
+        font-size: 28px !important; /* Было 45px */
+    }
+
+    /* Контакты */
+    .contact-link {
+        font-size: 10px !important; /* Было 13px */
+    }
+
+    /* Описание ролей */
+    .role-list li {
+        font-size: 10px !important; /* Было 14px */
+    }
+
+    /* Заголовок секции (SELECTED WORKS) */
+    .section-title {
+        font-size: 16px !important; /* Было 18px */
+    }
+
+    /* Ссылки на проекты */
+    .project-list-link {
+        font-size: 13px !important; /* Было 14px */
+    }
+
+    /* Описание проекта */
+    .project-description p {
+        font-size: 13px !important; /* Было 14px */
+    }
+
+    /* Кнопки переключателя */
+    .switcher-link {
+        font-size: 10px !important; /* Уже 10px, можно оставить */
+    }
+
+    /* Текст в плеере (workflow) */
+    .workflow-block-title {
+        font-size: 13px !important; /* Было 14px */
+    }
+
+    .workflow-block-desc {
+        font-size: 12px !important; /* Было 13px */
+    }
+
+    /* === РАЗМЕРЫ ТЕКСТА РОЛЕЙ И СОФТА НА МОБИЛЬНЫХ === */
+
+    /* Роль в списке проектов (главная) */
+    .project-description .role-text {
+        font-size: 12px !important;
+        margin-top: 12px;
+    }
+
+    /* Список софта в списке проектов (главная) */
+    .project-description .soft-list li {
+        font-size: 12px !important;
+        padding: 1px 0;
+    }
+
+    /* Роль на странице проекта */
+    .project-description-content-wrapper .role-text {
+        font-size: 12px !important;
+    }
+
+    /* Список софта на странице проекта */
+    .project-description-content-wrapper .soft-list li {
+        font-size: 12px !important;
+        padding: 1px 0;
+    }
+
+    /* ROADMAP */
+    .workflow-block-title {
+        font-size: 13px !important;
+    }
+
+    .workflow-block-desc {
+        font-size: 12px !important;
     }
 }
 
