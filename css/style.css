@@ -1118,19 +1118,24 @@
    ========================================= */
 
 @media (max-width: 768px) {
-    /* === КРИТИЧНО: разрешаем прокрутку всей страницы === */
+    /* === КРИТИЧНО: box-sizing для всех элементов === */
+    *, *::before, *::after {
+        box-sizing: border-box !important;
+    }
+
+    /* === Структура страницы === */
     .split-page {
         height: auto !important;
         min-height: 100vh;
         overflow-y: auto !important;
         overflow-x: hidden !important;
-        display: block !important; /* Меняем flex на block */
+        display: block !important;
     }
 
     .split-container {
         height: auto !important;
         min-height: 100vh;
-        display: block !important; /* Меняем flex на block */
+        display: block !important;
     }
 
     /* === Правая панель (контент) === */
@@ -1142,20 +1147,31 @@
         overflow-y: auto;
         overflow-x: hidden;
         display: block !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 
     /* === Левая панель (профиль) === */
     .left-panel {
         order: 2 !important;
         height: auto !important;
-        width: 100% !important; /* КРИТИЧНО: было 25% */
+        width: 100% !important;
         border-right: none !important;
         border-top: 2px solid #ffffff;
         overflow-y: auto;
         display: block !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 
-    /* === КОМПАКТНОЕ ГОРИЗОНТАЛЬНОЕ МЕНЮ === */
+    /* === Скрываем Selected, Linktree и Copyright на мобильных === */
+    .left-panel .info-section:nth-child(3),
+    .left-panel .info-section:last-of-type,
+    .left-panel .copyright {
+        display: none !important;
+    }
+
+    /* === Переключатель категорий (автоматически с отступами от padding родителя) === */
     .category-switcher {
         position: sticky;
         top: 0;
@@ -1168,6 +1184,9 @@
         -ms-overflow-style: none;
         white-space: nowrap;
         border-bottom: 2px solid #ffffff;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .category-switcher::-webkit-scrollbar {
@@ -1197,7 +1216,7 @@
     /* === Профиль === */
     .profile-header {
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         text-align: left;
         gap: 12px;
     }
@@ -1212,14 +1231,16 @@
     }
 
     .profile-contacts {
-        align-items: left;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
     }
 
     .profile-section,
     .info-section,
     .project-title,
     .project-description {
-        padding: 16px;
+        padding: 16px 0;
     }
 
     .project-title {
@@ -1269,7 +1290,7 @@
     }
 
     .project-description-content-wrapper {
-        padding: 16px;
+        padding: 16px 0;
     }
 
     /* === Cover режим === */
@@ -1303,79 +1324,6 @@
     /* === Workflow === */
     .workflow-block-content {
         padding: 12px;
-    }
-
-        /* Скрываем блок Selected Works */
-    .left-panel .info-section:nth-child(3) {
-        display: none !important;
-    }
-
-    /* Скрываем ссылку linktree */
-    .left-panel .info-section:last-of-type {
-        display: none !important;
-    }
-
-    /* Отступы для левой панели */
-    .left-panel {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    /* Отступы для правой панели (где плеер) */
-    .right-panel {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    /* Отступы для категории-переключателя */
-    .category-switcher {
-        margin-left: -16px !important;
-        margin-right: -16px !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    /* Отступы для карточек проектов */
-    .project-item {
-        margin-bottom: 16px;
-    }
-
-    .project-item .project-media-player {
-        border-radius: 4px;
-    }
-
-    /* === ОТСТУПЫ ДЛЯ ПЛЕЕРА (как на десктопе) === */
-
-    /* Для обычного режима (contain) */
-    .project-media-player:not(.media-fit-cover):not(.media-fit-grid) .media-stage {
-        top: 16px !important;
-        left: 16px !important;
-        right: 16px !important;
-        bottom: 16px !important;
-    }
-
-    /* Для cover режима — без отступов */
-    .project-media-player.media-fit-cover .media-stage {
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-    }
-
-    /* Для grid режима — свои отступы */
-    .project-media-player.media-fit-grid .media-stage {
-        top: 8px !important;
-        left: 8px !important;
-        right: 8px !important;
-        bottom: 8px !important;
-    }
-
-    /* Для страницы проекта — увеличенные отступы */
-    .project-view-page .project-media-player .media-stage {
-        top: 16px !important;
-        left: 16px !important;
-        right: 16px !important;
-        bottom: 16px !important;
     }
 }
 
