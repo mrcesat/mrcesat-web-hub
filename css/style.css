@@ -1362,12 +1362,12 @@
 
     /* Контакты */
     .contact-link {
-        font-size: 10px !important; /* Было 13px */
+        font-size: 12px !important; /* Было 13px */
     }
 
     /* Описание ролей */
     .role-list li {
-        font-size: 10px !important; /* Было 14px */
+        font-size: 12px !important; /* Было 14px */
     }
 
     /* Заголовок секции (SELECTED WORKS) */
@@ -1432,6 +1432,12 @@
     .workflow-block-desc {
         font-size: 12px !important;
     }
+
+    /* Уменьшаем отступ перед linktree */
+    .left-panel .info-section:nth-child(4) {
+        padding-top: 8px !important;
+    }
+
 }
 
 /* =========================================
