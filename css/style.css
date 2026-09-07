@@ -1172,7 +1172,7 @@
         display: none !important;
     }
 
-    /* === Переключатель категорий с белой линией сверху === */
+    /* === Переключатель категорий — с отступами как все элементы === */
     .category-switcher {
         position: sticky;
         top: 0;
@@ -1184,11 +1184,9 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         white-space: nowrap;
-        border-top: 2px solid #ffffff !important; /* ЛИНИЯ НАД ПЕРЕКЛЮЧАТЕЛЕМ */
         border-bottom: 2px solid #ffffff;
-        width: calc(100% + 32px) !important;
-        margin-left: -16px !important;
-        margin-right: -16px !important;
+        width: 100% !important; /* Просто 100% от родителя (с учётом padding) */
+        margin: 0 !important; /* Без отрицательных margin */
         padding: 0 !important;
     }
 
