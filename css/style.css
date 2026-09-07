@@ -1118,6 +1118,35 @@
    ========================================= */
 
 @media (max-width: 768px) {
+    /* === УБИРАЕМ БЕЛУЮ ПОЛОСКУ СВЕРХУ === */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .split-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+    }
+
+    .right-panel {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+    }
+
+    /* === РАЗДЕЛИТЕЛЬ ПОСЛЕ LINKTREE ПЕРЕД ПЕРЕКЛЮЧАТЕЛЕМ === */
+    .left-panel::before {
+        content: '';
+        display: block;
+        width: calc(100% - 32px); /* 100% минус padding (16px + 16px) */
+        height: 2px;
+        background: #ffffff;
+        margin: 0 16px 16px 16px; /* Отступы сверху/снизу/слева/справа */
+    }
+
+
     /* === КРИТИЧНО: box-sizing для всех элементов === */
     *, *::before, *::after {
         box-sizing: border-box !important;
@@ -1259,6 +1288,14 @@
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
+    }
+
+    /* Отступы для плееров на главной странице */
+    .projects-list .project-item .media-stage {
+        top: 16px !important;
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
     }
 
     .project-content {
