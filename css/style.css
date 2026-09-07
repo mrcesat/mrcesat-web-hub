@@ -1172,7 +1172,7 @@
         display: none !important;
     }
 
-    /* === Переключатель категорий — с отступами и линией сверху === */
+    /* === Переключатель категорий — с отступами через margin === */
     .category-switcher {
         position: sticky;
         top: 0;
@@ -1184,19 +1184,11 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         white-space: nowrap;
-        border-top: 2px solid #ffffff !important; /* ← Линия сверху */
+        border-top: 2px solid #ffffff !important;
         border-bottom: 2px solid #ffffff;
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Специфично для правой панели на всех страницах */
-    .right-panel .category-switcher {
-        width: calc(100% - 32px) !important; /* Учитываем padding родителя */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin-left: 16px !important; /* ← Отступ слева */
+        margin-right: 16px !important; /* ← Отступ справа */
+        width: calc(100% - 32px) !important; /* ← Ширина с учётом отступов */
     }
 
     .category-switcher::-webkit-scrollbar {
