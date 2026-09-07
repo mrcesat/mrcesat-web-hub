@@ -307,6 +307,7 @@ function initGridMode() {
         }
     });
 
+
     console.log('Grid mode: инициализация завершена');
 }
 
@@ -314,3 +315,60 @@ function initGridMode() {
 window.addEventListener('load', () => {
     setTimeout(initGridMode, 500);
 });
+
+// ============================================
+// СВАЙПЫ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+// ============================================
+
+function initSwipeSupport() {
+    const players = document.querySelectorAll('.project-media-player');
+
+    players.forEach(player => {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const minSwipeDistance = 50; // Минимальная дистанция свайпа в пикселях
+
+        // Отслеживаем начало касания
+        player.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        // Отслеживаем конец касания
+        player.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        // Определяем направление свайпа
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (Math.abs(swipeDistance) < minSwipeDistance) {
+                return; // Слишком короткий свайп, игнорируем
+            }
+
+            if (swipeDistance > 0) {
+                // Свайп вправо — предыдущий слайд
+                const prevZone = player.querySelector('.player-zone-left');
+                if (prevZone) {
+                    prevZone.click();
+                }
+            } else {
+                // Свайп влево — следующий слайд
+                const nextZone = player.querySelector('.player-zone-right');
+                if (nextZone) {
+                    nextZone.click();
+                }
+            }
+        }
+    });
+
+    console.log('Swipe support initialized');
+}
+
+// Вызываем после загрузки страницы
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSwipeSupport);
+} else {
+    initSwipeSupport();
+}

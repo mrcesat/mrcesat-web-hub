@@ -1304,6 +1304,79 @@
     .workflow-block-content {
         padding: 12px;
     }
+
+        /* Скрываем блок Selected Works */
+    .left-panel .info-section:nth-child(3) {
+        display: none !important;
+    }
+
+    /* Скрываем ссылку linktree */
+    .left-panel .info-section:last-of-type {
+        display: none !important;
+    }
+
+    /* Отступы для левой панели */
+    .left-panel {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Отступы для правой панели (где плеер) */
+    .right-panel {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Отступы для категории-переключателя */
+    .category-switcher {
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Отступы для карточек проектов */
+    .project-item {
+        margin-bottom: 16px;
+    }
+
+    .project-item .project-media-player {
+        border-radius: 4px;
+    }
+
+    /* === ОТСТУПЫ ДЛЯ ПЛЕЕРА (как на десктопе) === */
+
+    /* Для обычного режима (contain) */
+    .project-media-player:not(.media-fit-cover):not(.media-fit-grid) .media-stage {
+        top: 16px !important;
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+    }
+
+    /* Для cover режима — без отступов */
+    .project-media-player.media-fit-cover .media-stage {
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+
+    /* Для grid режима — свои отступы */
+    .project-media-player.media-fit-grid .media-stage {
+        top: 8px !important;
+        left: 8px !important;
+        right: 8px !important;
+        bottom: 8px !important;
+    }
+
+    /* Для страницы проекта — увеличенные отступы */
+    .project-view-page .project-media-player .media-stage {
+        top: 16px !important;
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+    }
 }
 
 /* =========================================
