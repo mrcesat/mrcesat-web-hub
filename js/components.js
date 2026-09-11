@@ -97,7 +97,9 @@ async function renderProjectsList(activeCategory = null) {
             }
 
             const mediaMode = project.mediaMode || 'contain';
-            const mediaClass = mediaMode === 'cover' ? 'media-fit-cover' : 'media-fit-contain';
+            let mediaClass = 'media-fit-contain';
+            if (mediaMode === 'cover') mediaClass = 'media-fit-cover';
+            else if (mediaMode === 'grid') mediaClass = 'media-fit-grid';
 
             html += `
             <article class="project-item" data-project-bg="${project.bgColor}">

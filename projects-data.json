@@ -23,7 +23,7 @@
         { "step": 4, "title": "Рендеринг", "description": "Финальная обработка" }
       ],
       "playerHeight": 600,
-      "mediaMode": "contain",
+      "mediaMode": "grid",
       "media": [
         { "type": "img", "src": "cases/20263DM/preview.jpg", "alt": "Graphic Design" },
         { "type": "video", "src": "cases/20263DM/0001-0871.mp4", "alt": "Middle Note" }
