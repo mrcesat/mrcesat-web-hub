@@ -37,7 +37,7 @@
       "description": "Встречи Морфология запаха: Клуб «Middle Notes» Марины Рябцевой в рамках её дипломного проекта, 15–16 мая 2026: лекции «История структурирования запаха» и «Попытки уловить запах», реконструкция игры Kodo, воркшопы «Визуальный анализ ароматов»",
       "role": "Куратор, фотограф",
       "bgColor": "#5a52a8",
-      "categories": ["curatorial", "photo"],
+      "categories": ["curatorial"],
       "playerHeight": 500,
       "mediaMode": "cover",
       "media": [
@@ -58,7 +58,7 @@
       "bgColor": "#c47a3a",
       "categories": ["curatorial", "photo"],
       "playerHeight": 500,
-      "mediaMode": "cover",
+      "mediaMode": "grid",
       "media": [
         { "type": "img", "src": "cases/2023svoxternii/svoxternii (2).jpg", "alt": "Сквозь Тернии 1" },
         { "type": "img", "src": "cases/2023svoxternii/svoxternii (1).jpg", "alt": "Сквозь Тернии 1" },
@@ -75,9 +75,9 @@
       "description": "Фотосет Саши Артемьевой aka Ласка в преддверии премьеры лайва с синглом «Тону» на платформе «MOR».",
       "role": "Фотограф",
       "bgColor": "#2a4a6b",
-      "categories": ["creative", "photo"],
+      "categories": ["photo"],
       "playerHeight": 450,
-      "mediaMode": "cover",
+      "mediaMode": "grid",
       "media": [
         { "type": "img", "src": "cases/2024laskaonkama/laska2024_(1).jpg", "alt": "Ласка на Каме" }
       ]
