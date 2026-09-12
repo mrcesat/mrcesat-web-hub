@@ -105,7 +105,7 @@
       "bgColor": "#000000",
       "categories": ["photo"],
       "playerHeight": 500,
-      "mediaMode": "cover",
+      "mediaMode": "grid",
       "media": [
         { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (9).jpg", "alt": "img" },
         { "type": "img", "src": "cases/20242025IzhLocalGigs/LocalGig (16).jpg", "alt": "img" },
@@ -126,7 +126,7 @@
       "bgColor": "#000000",
       "categories": ["graphic"],
       "playerHeight": 600,
-      "mediaMode": "contain",
+      "mediaMode": "grid",
       "media": [
         { "type": "img", "src": "cases/2026IzhResidence/ar (5).jpg", "alt": "img" },
         { "type": "img", "src": "cases/2026IzhResidence/plen (1).jpg", "alt": "img" },
